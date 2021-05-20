@@ -1,0 +1,27 @@
+<ul class="nav nav-pills" style="background:rgb(44, 48, 51);">
+  <a class="navbar-brand" style="color: white; margin-left: 2cm" href="/">Notes App</a>
+  <li class="nav-item active">
+    <a class="nav-link" style="color: white;" href="/">Inicio <span class="sr-only">(current)</span></a>
+  </li>
+  <li class="nav-item me-auto">
+    <a class="nav-link" style="color: white;" href="/about">Sobre la aplicación</a>
+  </li>
+  {{#if user}}
+  <li class="nav-item dropdown ml-auto">
+    <a class="nav-link dropdown-toggle " data-bs-toggle="dropdown" style="color: white;" href="#" role="button" aria-expanded="false">Notas</a>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" style="color: black" href="/notes">Todas las notas</a></li>
+      <li><a class="dropdown-item" style="color: black;" href="/notes/add">Agregar nota</a></li>
+      <li><hr class="dropdown-divider"></li>
+      <li><a class="dropdown-item" style="color: black;" href="/users/logout">Cerrar Sesion</a></li>
+    </ul> 
+  </li>
+  {{else}}
+  <li class="nav-item">
+    <a class="nav-link" style="color: white;" href="/users/signin">Iniciar sesion</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" style="color: white;" href="/users/signup">Registrarse</a>
+  </li>
+  {{/if}}
+</ul>
